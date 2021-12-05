@@ -1,5 +1,5 @@
 import React from "react";
-import FavouritesCards from "./Components/FavouritesCards";
+import FavouritesCards from "./Components";
 
 const App = () => {
   return (

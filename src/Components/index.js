@@ -1,9 +1,9 @@
 import { Button, Row, message } from "antd";
 import React, { useState, useEffect } from "react";
 import { useHistory } from "react-router-dom";
-import "./FavouritesCards.scss";
+import "./index.scss";
 // import { withTranslation } from "react-i18next";
-import FavouritesCardsContent from "./FavouritesCardsContent";
+import FavouritesCardsContent from "./TextCard";
 
 const Favourites = ({ CareGiver, Telehealth, t }) => {
   const [favlist, setFavlist] = useState([
