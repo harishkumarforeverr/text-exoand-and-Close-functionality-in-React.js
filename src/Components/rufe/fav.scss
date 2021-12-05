@@ -1,0 +1,340 @@
+// @import "../../../../../Scss/base/_colors.scss";
+.DoctorCards-container {
+  // background-color: red;
+  padding-top: 2%;
+  width: 100%;
+  padding-right: 1%;
+  .DoctorCards {
+    .ant-row::before,
+    .ant-row::after {
+      display: none;
+    }
+    .ant-row {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      grid-column-gap: 2rem;
+
+      & > div {
+        width: 100%;
+      }
+    }
+    // background-color: green;
+    i.anticon.anticon-heart {
+      position: absolute;
+      top: 2rem;
+      right: 12rem;
+      font-size: 2.2rem;
+      z-index: 100;
+      cursor: pointer;
+    }
+    .DocterDetails {
+      position: relative;
+      text-align: center;
+      // width: 82%;
+      // min-height: 32.5rem;
+      background: white 0% 0% no-repeat padding-box;
+      box-shadow: 0px 2px 20px var(--black-seventh);
+      border-radius: 15px;
+      margin-bottom: 18%;
+      z-index: 1;
+      cursor: pointer;
+      outline: none;
+      height: 41rem;
+      // background-color: hotpink;
+      &__innerConnect {
+        // width: 80%;
+        // background-color: goldenrod;
+        width: 100%;
+      }
+      i.anticon.anticon-heart {
+        position: absolute;
+        top: 2rem;
+        right: 2rem;
+        font-size: 2.2rem;
+      }
+      .ant-card-body {
+        // background-color: greenyellow;
+        padding: 0;
+        padding-top: 15%;
+        //   height: 30.555rem;
+      }
+      .DocterDetails-Content {
+        height: 34.5rem;
+        .NoProfileImg {
+          background-color: $primary;
+          .ant-avatar-string {
+            font-size: 7rem;
+          }
+        }
+        h2 {
+          color: $md-primary;
+          font-size: 2.5rem;
+          padding-left: unset;
+          padding-top: 1.5rem;
+          padding-bottom: 1.15rem;
+        }
+        h4 {
+          color: var(--text-color);
+          font-weight: 600;
+          font-size: 1.65rem;
+          margin-top: 1.5rem;
+          padding-bottom: 0.5rem;
+        }
+        p {
+          color: var(--text-color);
+          font-weight: 500;
+          font-size: 1.6rem;
+          margin-bottom: 0;
+        }
+        .paragraphContainer {
+          padding: 0 1.2%;
+          margin-top: 4%;
+          height: 100%;
+          // position: absolute;
+          // bottom: 0;
+          text-align: center;
+          width: 100%;
+          /* width */
+          ::-webkit-scrollbar {
+            width: 0.8rem;
+          }
+
+          /* Track */
+          ::-webkit-scrollbar-track {
+            box-shadow: inset 0 0 5px currentColor;
+            border-radius: 100rem;
+          }
+
+          /* Handle */
+          ::-webkit-scrollbar-thumb {
+            background: currentColor;
+            border-radius: 190px;
+          }
+
+          // /* Handle on hover */
+          ::-webkit-scrollbar-thumb:hover {
+            background: currentColor;
+          }
+        }
+
+        .paragraph {
+          text-align: center;
+          margin-bottom: 1rem;
+          height: 7rem;
+          overflow-y: auto;
+          color: var(--text-color);
+        }
+        .paragraph .hide {
+          overflow: hidden;
+        }
+      }
+      :active {
+        opacity: 1 !important;
+        z-index: 10000;
+      }
+
+      .DocterDetails-Btns {
+        display: none;
+        button.ant-btn.Book {
+          background-color: white;
+          border-color: white;
+          border-radius: 30px;
+          color: $primary;
+          height: 3.8rem;
+          width: 16rem;
+          font-size: 1.3rem;
+          font-weight: 600;
+          margin-bottom: 2rem;
+          &:hover {
+            background-color: white;
+            border-color: white;
+          }
+          &:focus {
+            background-color: white;
+            border-color: white;
+          }
+        }
+        button.ant-btn.View {
+          border: 3px solid white;
+          border-radius: 30px;
+          color: white;
+          height: 3.8rem;
+          width: 16rem;
+          font-size: 1.3rem;
+          font-weight: 600;
+          background-color: transparent;
+          &:hover {
+            border-color: white;
+            color: white;
+          }
+          &:focus {
+            border-color: white;
+            color: white;
+          }
+        }
+      }
+      &:focus,
+      &:active {
+        outline: none;
+        // background: transparent
+        //   0% 0% no-repeat padding-box;
+        .DocterDetails-Content {
+          opacity: 0.25;
+        }
+        .DocterDetails-Btns {
+          display: unset;
+          position: absolute;
+          top: 36%;
+          right: 18%;
+        }
+      }
+    }
+  }
+}
+
+.Favourites-doctor-btn {
+  text-align: center;
+  padding: 4rem 0;
+  .View_more {
+    color: $md-primary;
+    height: 5.5rem;
+    background: var(-white-fourth) 0% 0% no-repeat padding-box;
+    border: 0.5px solid $md-primary;
+    border-radius: 60px;
+    width: 13rem;
+    font-size: 1.5rem;
+    font-weight: 500;
+    &:hover,
+    &:focus {
+      background-color: $md-primary;
+      color: white;
+      border: 0.5px solid $md-primary;
+    }
+  }
+}
+.dashboard_favourites_info {
+  text-align: center;
+  margin-top: 10%;
+  h3 {
+    font-weight: 600;
+    font-size: 1.83rem;
+  }
+  .dashboard_favourites_info-content {
+    text-align: center;
+    padding-top: 2%;
+    h4 {
+      color: $dark;
+      font-size: 1.5rem;
+      line-height: 1.2;
+    }
+    @media screen and (max-width: 37.5em) {
+      h4 {
+        font-family: var(--Book);
+      }
+    }
+  }
+  .Explore-setup {
+    padding-top: 3%;
+    button.ant-btn.Explore-button {
+      border-radius: 12px;
+      font-weight: 500;
+      font-size: 1.4rem;
+      height: 4rem;
+      background-color: $primary;
+      border-color: $primary;
+      color: white;
+    }
+  }
+}
+
+// @media screen and (min-width: 75em) {
+//   .DoctorCards {
+//     .DocterDetails {
+//       min-height: 36.5rem;
+//       div.ant-typography,
+//       .ant-typography p {
+//         margin-bottom: 1rem;
+//         height: 10rem;
+//         overflow-y: auto;
+//         overflow-x: hidden !important;
+//         color: var(--text-color);
+//       }
+//     }
+//   }
+// }
+@media screen and (min-width: 100em) {
+  .DoctorCards-container {
+    .DoctorCards {
+      .ant-row {
+        grid-template-columns: repeat(5, 1fr);
+      }
+      .DocterDetails {
+        height: 43rem;
+      }
+    }
+  }
+}
+@media screen and (max-width: 67em) {
+  .DoctorCards-container {
+    .DoctorCards {
+      .ant-row {
+        grid-template-columns: repeat(3, 1fr);
+      }
+      .DocterDetails {
+        height: 43rem;
+      }
+    }
+  }
+}
+@media screen and (max-width: 47em) {
+  .DoctorCards-container
+    .DoctorCards
+    .DocterDetails
+    .DocterDetails-Content
+    .paragraph {
+    height: 8rem;
+  }
+
+  .DoctorCards-container {
+    .DoctorCards {
+      .DocterDetails {
+        height: 46rem;
+      }
+      // .ant-row {
+      //   grid-template-columns: repeat(2, 1fr);
+      // }
+    }
+  }
+}
+@media screen and (max-width: 35em) {
+  .DoctorCards-container
+    .DoctorCards
+    .DocterDetails
+    .DocterDetails-Content
+    .paragraph {
+    height: 8rem;
+  }
+  .DoctorCards-container {
+    .DoctorCards {
+      .ant-row {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 21.5em) {
+  .DoctorCards-container {
+    .DoctorCards {
+      .ant-row {
+        grid-template-columns: repeat(1, 1fr);
+      }
+      .DocterDetails {
+        margin-bottom: 7%;
+        .ant-card-body {
+          padding-top: 12%;
+        }
+      }
+    }
+  }
+}
